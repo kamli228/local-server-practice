@@ -11,7 +11,7 @@ const server = http.createServer((request, response) => {
         response.statusCode = 200;
         response.end(
             JSON.stringify({
-                message: "Hello",
+                message: "Hello from Git",
             }),
         );
         return;
@@ -21,10 +21,17 @@ const server = http.createServer((request, response) => {
         response.statusCode = 200;
         response.end(
             JSON.stringify({
-                tasks: [{
+                tasks: [
+                {
                     "id": 1,
                     "title": "Learn Git",
-                }]
+                },
+                {
+                    "id": 2,
+                    "title": "lalala",
+
+                }
+            ]
             })
         );
         return;
