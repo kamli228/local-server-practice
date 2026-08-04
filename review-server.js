@@ -11,7 +11,7 @@ const server = http.createServer((request, response) => {
         response.statusCode = 200;
         response.end(
             JSON.stringify({
-                message: "Hello from main branch",
+                message: "Hello after merge conflict",
             }),
         );
         return;
