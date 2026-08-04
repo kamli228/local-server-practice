@@ -37,6 +37,16 @@ const server = http.createServer((request, response) => {
         return;
     }
 
+    if(request.method === "GET" && request.url === "/health") {
+        response.statusCode = 200;
+        response.end(
+            JSON.stringify({
+                "status": "ok",
+            })
+        )
+        return;
+    }
+
     response.statusCode = 404;
     response.end(
         JSON.stringify({
